@@ -19,7 +19,7 @@ public class move : MonoBehaviour
 
     public Rigidbody body;
 
-    float force = 100f;
+    float force = 200f;
 
     public int damage = 100;
     public int health = 100;
@@ -41,7 +41,7 @@ public class move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         body.velocity = transform.forward * force * Time.deltaTime;
 
