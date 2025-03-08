@@ -33,8 +33,8 @@ public class shoot : MonoBehaviour
         }
         else
         {
-            Debug.Log(other.name);
-                if (other.name == "Car_v1(Clone)" || other.name == "Car V2(Clone)")
+            Debug.Log(other.tag);
+                if (other.tag == "Enemy1" || other.name == "Enemy2")
                 {
                     GameObject x = other.gameObject;
                     // instaniate bullet here
@@ -42,7 +42,7 @@ public class shoot : MonoBehaviour
                     b = Instantiate(bullet, transform);
                     b.GetComponent<MoveBullet>().move(x);
 					source = GetComponent<AudioSource>();
-					source.PlayOneShot(source.clip, 0.1f);
+					source.PlayOneShot(source.clip, 0.03f);
                 }
             timer = 0.5f;
         }

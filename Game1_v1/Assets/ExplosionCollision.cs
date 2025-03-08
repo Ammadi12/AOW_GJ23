@@ -45,14 +45,14 @@ public class ExplosionCollision : MonoBehaviour
         if (collisioninfo.gameObject.tag == "Enemy1")
         {
             source = GetComponent<AudioSource>();
-            source.PlayOneShot(source.clip, 0.3f);
+            source.PlayOneShot(source.clip, 0.1f);
    			StartCoroutine(CameraShake());
             
         }
 		if (collisioninfo.gameObject.tag == "Enemy2")
         {
             source = GetComponent<AudioSource>();
-            source.PlayOneShot(source.clip, 0.3f);
+            source.PlayOneShot(source.clip, 0.1f);
    			StartCoroutine(CameraShake());
             
         }
